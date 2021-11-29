@@ -15,23 +15,25 @@
 </head>
 <body>
     <section id="table">
-        <form id="formCriar" method="POST">
-            <div id="input-data">
-                <input id="pesquisa" class="input-text" placeholder="Buscar Id" type="text" required />
-                <input class="input-btn" type="button" value="Buscar" onclick="return exibirCurso()" />
-                <!--<input class="input-btn" type="submit" value="Enviar" onclick="return criarCurso()" />-->
-            </div>
+         <div id="formCriar">
+            <form  method="POST">
+                <div id="input-data">
+                    <input id="pesquisa" class="input-text" placeholder="Buscar Id" type="text" required />
+                    <input class="input-btn" type="button" value="Buscar" onclick="return exibirCurso()" />
+                    <!--<input class="input-btn" type="submit" value="Enviar" onclick="return criarCurso()" />-->
+                </div>
+                </form>
+            <form method="POST">
+                <div id="input-data">
+                    <input id="titulo" class="input-text" placeholder="Titulo" type="text" required />
+                    <input id="descricao" class="input-text" placeholder="Descrição" type="text" required />
+                    <input id="imagem" class="input-text" placeholder="Imagem" type="file" required />
+                    <input id="nomeProfessor" class="input-text" placeholder="Nome do professor" type="text" required />
+                    <input id="listAula" class="input-text" placeholder="Lista de aulas" type="text" required />
+                    <input class="input-btn" type="button" value="Enviar" onclick="return criarCurso()" />
+                </div>
             </form>
-        <form id="formCriar" method="POST">
-        <div id="input-data">
-            <input id="titulo" class="input-text" placeholder="Titulo" type="text" required />
-            <input id="descricao" class="input-text" placeholder="Descrição" type="text" required />
-            <input id="imagem" class="input-text" placeholder="Imagem" type="file" required />
-            <input id="nomeProfessor" class="input-text" placeholder="Nome do professor" type="text" required />
-            <input id="listAula" class="input-text" placeholder="Lista de aulas" type="text" required />
-            <input class="input-btn" type="button" value="Enviar" onclick="return criarCurso()" />
         </div>
-        </form>
         <div id="formAtualizar" style="display: none;"> 
             <input class="input-btn" type="button" value="Voltar a lista" onclick="return voltarLista()" />
             <form  method="POST" >
