@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <title>Sistema de cursos</title>
+    <script type="text/javascript" src="script.js"></script>
+    <style>
+        table{
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        th, td{
+            padding: 10px 20px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <section id="table">
+        <form id="formCriar" method="POST">
+            <div id="input-data">
+                <input id="pesquisa" class="input-text" placeholder="Buscar Id" type="text" required />
+                <input class="input-btn" type="button" value="Buscar" onclick="return exibirCurso()" />
+                <!--<input class="input-btn" type="submit" value="Enviar" onclick="return criarCurso()" />-->
+            </div>
+            </form>
+        <form id="formCriar" method="POST">
+        <div id="input-data">
+            <input id="titulo" class="input-text" placeholder="Titulo" type="text" required />
+            <input id="descricao" class="input-text" placeholder="Descrição" type="text" required />
+            <input id="imagem" class="input-text" placeholder="Imagem" type="number" required />
+            <input id="nomeProfessor" class="input-text" placeholder="Nome do professor" type="text" required />
+            <input id="listAula" class="input-text" placeholder="Lista de aulas" type="text" required />
+            <input class="input-btn" type="button" value="Enviar" onclick="return criarCurso()" />
+        </div>
+        </form>
+        <div id="formAtualizar" style="display: none;"> 
+            <input class="input-btn" type="button" value="Voltar a lista" onclick="return voltarLista()" />
+            <form  method="POST" >
+                <div id="input-data">
+                    <input id="tituloAtt" class="input-text" placeholder="Titulo" type="text" required />
+                    <input id="descricaoAtt" class="input-text" placeholder="Descrição" type="text" required />
+                    <input id="imagemAtt" class="input-text" placeholder="Imagem" type="number" required />
+                    <input id="nomeProfessorAtt" class="input-text" placeholder="Nome do professor" type="text" required />
+                    <input id="listAulaAtt" class="input-text" placeholder="Lista de aulas" type="text" required />
+                    <input class="input-btn" type="button" value="Atualizar" onclick="return atualizarCurso()" />
+                </div>
+            </form>
+        </div>
+        <table class="corpo" id="tabela">       
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Titulo</th>
+                    <th>Descrição</th>
+                    <th>Imagem</th>
+                    <th>Nome do profesor</th>
+                    <th>Lista de aulas</th>
+                    <th>Ações</th>
+                </tr>
+            </thead> 
+        </table>
+    </section>
+</body>
+</html>
